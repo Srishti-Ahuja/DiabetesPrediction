@@ -1,0 +1,25 @@
+{%extends 'base.html' %}
+{% load static %}
+
+{%block title %}Predict Diabetes{% endblock %}
+
+{% block content %}
+    <h3 style="margin-bottom: 20px;">Symptoms of diabetes: </h3>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <img style="width:80%" src="{% static 'DiabetesPrediction\images\diabetes-signs2.jpg' %}">
+        </div>
+    </div>
+    <div class="container">
+        <h3 style="margin-top: 25px;">Facing these Symptoms? Get tested now.</h3>
+        <p>Our Diabetes Prediction system can give you a fast Prediction of Diabetes with 80% accuracy sitting at home by
+            fill up few fields regarding existing health condition such Blood Pressure, Glucose Level etc. that one can easily 
+            find out at home and get a quick diagnosis of diabetes.
+            By using this app you can find out the possibility of having diabetes so that you can fix an appointment 
+            with the doctor and get started on the medications as soon as possible.
+        </p>
+    </div>
+
+    <a href="predict" type="button" class="btn btn-light">Get Started</a>
+{% endblock %}
