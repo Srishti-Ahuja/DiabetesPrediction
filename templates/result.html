@@ -5,7 +5,7 @@
 
 {% block content %}
     
-    <h3 style="margin-bottom: 20px;">Result: {{result1}}</h3>
+    <h3 style="margin-bottom: 20px; color:sandybrown;">Result: {{result1}}</h3>
 
     {% if result1 == "Diabetic" %}
     <div class="row">
@@ -21,7 +21,7 @@
                 Thus you must keep consult a doctor regularly to manage the disease so that you can have control over it before 
                 it gets control over you.
             </p>
-            <a href="predict" type="button" class="btn btn-light" style="margin-bottom: 20px;">Test Again</a>
+            <a href="{% url 'predict' %}" type="button" class="btn btn-light" style="margin-bottom: 20px;">Test Again</a>
         </div>
     </div>
     {% endif %}
@@ -39,7 +39,7 @@
             <p>Diabetes is a chronic diseases and a comorbidity that can give rise to many undesirable health conditions.
                 Thus you must keep getting tested regularly so that you can have control over it before it gets control over you.
             </p>
-            <a href="predict" type="button" class="btn btn-light" style="margin-bottom: 20px;">Test Again</a>
+            <a href="{% url 'predict' %}" type="button" class="btn btn-light" style="margin-bottom: 20px;">Test Again</a>
         </div>
     </div>
     {% endif %}

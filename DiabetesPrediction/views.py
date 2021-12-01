@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, auth
+from django.contrib import messages
 
 import pandas as pd
 import numpy as np
@@ -13,7 +15,7 @@ def predict(request):
     return render(request,'predict.html')
 
 def result(request):
-    data = pd.read_csv(r'C:\Users\ADMIN\Downloads\diabetes.csv')
+    data = pd.read_csv('https://storageblob123.blob.core.windows.net/static/dataset/diabetes.csv')
     X=data.drop("Outcome", axis=1) 
     Y=data['Outcome']
 
@@ -41,3 +43,47 @@ def result(request):
         result1="Not Diabetic" 
 
     return render(request,'result.html', {"result1":result1})
+
+def register(request):
+    if request.method=='POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['first_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        flag=0
+        if password1!=password2:
+            messages.info(request, "Passwords don't match")
+            flag=1
+        if User.objects.filter(username=username).exists():
+            messages.info(request, "Username already taken")
+            flag=1
+        if User.objects.filter(email=email).exists():
+            messages.info(request, "This email is linked to an existing account")
+            flag=1
+        if flag == 1:
+            return redirect('register')
+        else:
+            user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password1, email=email)
+            user.save()
+            return redirect('login')
+    else:
+        return render(request,'register.html')
+
+def login(request):
+    if request.method=='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect('home')
+        else:
+            messages.info(request, "Invalid Credentials")
+            return redirect('login')
+    return render(request,'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('home')

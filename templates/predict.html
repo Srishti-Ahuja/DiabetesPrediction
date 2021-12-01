@@ -6,6 +6,7 @@
 {% block content %}
                     
                     <form action="result" class="bannerbody">
+                        {% csrf_token %}
                         <h3 style="margin-bottom: 20px;">Enter the following details: </h3>
                     
                         <table align="center" style="text-align: left;"> 
@@ -26,7 +27,7 @@
                                 <td><input type="text" name="n4"></td>
                             </tr>
                             <tr>
-                                <td>Insulin in mu U/ml </td>
+                                <td>Insulin in mu U/ml: </td>
                                 <td><input type="text" name="n5"></td>
                             </tr>
                             <tr>
