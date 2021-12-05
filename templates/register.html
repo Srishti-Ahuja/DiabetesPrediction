@@ -8,6 +8,7 @@
                     <form action="." method="post" class="bannerbody">
                         {% csrf_token %}
                         <h3 style="margin-bottom: 20px;">New User Registration: </h3>
+                        <p>Don't have an Account? <a href="{% url 'login' %}" style="color: white;"><u>Login here</u></a></p>
 
                         <div style="margin-bottom: 20px;">
                         {% for message in messages %}
