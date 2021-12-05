@@ -8,6 +8,7 @@
                     <form action="." method="post" class="bannerbody">
                         {% csrf_token %}
                         <h3 style="margin-bottom: 20px;">User Login: </h3>
+                        <p>Don't have an Account? <a href="{% url 'register' %}" style="color: white;"><u>Register here</u></a></p>
                     
                         <table align="center" style="text-align: left;"> 
                             <tr>
