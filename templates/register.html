@@ -5,14 +5,14 @@
 
 {% block content %}
                     
-                    <form action="." method="post" class="bannerbody">
+                    <form action="" method="post" class="bannerbody">
                         {% csrf_token %}
                         <h3 style="margin-bottom: 20px;">New User Registration: </h3>
-                        <p>Don't have an Account? <a href="{% url 'login' %}" style="color: white;"><u>Login here</u></a></p>
+                        <p>Already have an Account? <a href="{% url 'login' %}" style="color: white;"><u>Login here</u></a></p>
 
-                        <div style="margin-bottom: 20px;">
+                        <div style="margin-bottom: 25px;">
                         {% for message in messages %}
-                            <b style="color:sandybrown;">* * * {{message}} * * *</b><br>
+                            <span style="color:#FFD100;">* * * {{message}} * * *</span><br>
                         {% endfor %}
                         </div>
                     
