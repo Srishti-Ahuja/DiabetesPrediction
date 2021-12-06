@@ -5,7 +5,8 @@
 
 {% block content %}
     
-    <h3 style="margin-bottom: 20px; color:sandybrown;">Result: {{result1}}</h3>
+    {% if result1 == "Diabetic" %}<h3 style="margin-bottom: 20px; color: tomato;">Result: {{result1}}</h3>{% endif %}
+    {% if result1 == "Not Diabetic" %}<h3 style="margin-bottom: 20px; color:limegreen;">Result: {{result1}}</h3>{% endif %}
 
     {% if result1 == "Diabetic" %}
     <div class="row">
