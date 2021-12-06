@@ -1,15 +1,21 @@
 {%extends 'base.html' %}
 {% load static %}
 
-{%block title %}Registration{% endblock %}
+{%block title %}Sign in{% endblock %}
 
 {% block content %}
                     
-                    <form action="." method="post" class="bannerbody">
+                    <form action="" method="post" class="bannerbody">
                         {% csrf_token %}
                         <h3 style="margin-bottom: 20px;">User Login: </h3>
                         <p>Don't have an Account? <a href="{% url 'register' %}" style="color: white;"><u>Register here</u></a></p>
                     
+                        <div style="margin-bottom: 25px;">
+                            {% for message in messages %}
+                                <span style="color:#FFD100;">* * * {{message}} * * *</span><br>
+                            {% endfor %}
+                        </div>
+                        
                         <table align="center" style="text-align: left;"> 
                             <tr>
                                 <td>Username: </td>
@@ -23,9 +29,4 @@
                         <input type="submit" value="Submit" class="btn btn-light" style="margin:20px 0px">
                     </form>
 
-                    <div>
-                        {% for message in messages %}
-                            <p>{{message}}</p>
-                        {% endfor %}
-                    </div>
 {% endblock %}
