@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(BASE_DIR / "db.sqlite3"),
     }
-}'''
-DATABASES = {
+}
+'''DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
          'NAME': 'dbdjango',
