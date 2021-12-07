@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'DiabetesPrediction.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
-         'NAME': os.getenv("DATABASE_NAME"),
-         'USER': os.getenv("DATABASE_USER"),
-         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-         'HOST': 'os.getenv("DATABASE_HOST"),
-         'PORT': os.getenv("DATABASE_PORT"),
+         'NAME': os.getenv("DBNAME"),
+         'USER': os.getenv("DBUSER"),
+         'PASSWORD': os.getenv("DBPASS"),
+         'HOST': 'os.getenv("DBHOST"),
+         'PORT': '1433',
          'OPTIONS' : {
                 'driver': 'ODBC Driver 13 for SQL Server',
                 'MARS_Connection': 'True',
