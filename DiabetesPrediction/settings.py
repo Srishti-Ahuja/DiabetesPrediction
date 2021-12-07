@@ -75,26 +75,26 @@ WSGI_APPLICATION = 'DiabetesPrediction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(BASE_DIR / "db.sqlite3"),
     }
-}
-'''DATABASES = {
+}'''
+DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
-         'NAME': 'dbdjango',
-         'USER': 'admin1',
-         'PASSWORD': 'sqldb@123',
-         'HOST': 'dbserverdjango.database.windows.net',
-         'PORT': '1433',
-         'OPTIONS': {
-             'driver': 'ODBC Driver 13 for SQL Server',
-             'MARS_Connection': 'True',
-         }
-     }
- }'''
+         'NAME': os.getenv("DATABASE_NAME"),
+         'USER': os.getenv("DATABASE_USER"),
+         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+         'HOST': 'os.getenv("DATABASE_HOST"),
+         'PORT': os.getenv("DATABASE_PORT"),
+         'OPTIONS' : {
+                'driver': 'ODBC Driver 13 for SQL Server',
+                'MARS_Connection': 'True',
+          }
+      }
+ }
 
 
 # Password validation
