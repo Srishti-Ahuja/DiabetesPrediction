@@ -87,11 +87,11 @@ DATABASES = {
          'NAME': 'dbdjango',
          'USER': 'admin1',
          'PASSWORD': 'sqldb@123',
-         'HOST': 'dbserverdjango.database.windows.net',
+         'HOST': 'tcp:dbserverdjango.database.windows.net',
          'PORT': '1433',
          'OPTIONS' : {
                 'driver': 'ODBC Driver 13 for SQL Server',
-                'MARS_Connection': 'True',
+                #'MARS_Connection': 'True',
           }
       }
  }
