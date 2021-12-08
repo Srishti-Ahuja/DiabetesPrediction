@@ -85,13 +85,12 @@ DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
          'NAME': 'dbdjango',
-         'USER': 'admin1',
+         'USER': 'admin1@dbserverdjango',
          'PASSWORD': 'sqldb@123',
-         'HOST': 'tcp:dbserverdjango.database.windows.net',
+         'HOST': 'dbserverdjango.database.windows.net',
          'PORT': '1433',
          'OPTIONS' : {
                 'driver': 'ODBC Driver 13 for SQL Server',
-                #'MARS_Connection': 'True',
           }
       }
  }
