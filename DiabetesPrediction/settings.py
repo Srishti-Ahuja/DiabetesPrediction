@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'DiabetesPrediction.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
-         'NAME': os.getenv("DBNAME"),
-         'USER': os.getenv("DBUSER"),
-         'PASSWORD': os.getenv("DBPASS"),
-         'HOST': os.getenv("DBHOST"),
+         'NAME': 'dbdjango',
+         'USER': 'admin1',
+         'PASSWORD': 'sqldb@123',
+         'HOST': 'dbserverdjango.database.windows.net',
          'PORT': '1433',
          'OPTIONS' : {
                 'driver': 'ODBC Driver 13 for SQL Server',
