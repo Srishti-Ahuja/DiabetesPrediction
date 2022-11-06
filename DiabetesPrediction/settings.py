@@ -75,12 +75,13 @@ WSGI_APPLICATION = 'DiabetesPrediction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(BASE_DIR / "db.sqlite3"),
     }
-}'''
+}
+'''
 DATABASES = {
      'default': {
          'ENGINE': 'sql_server.pyodbc',
@@ -93,7 +94,7 @@ DATABASES = {
                 'driver': 'ODBC Driver 17 for SQL Server',
           }
       }
- }
+ }'''
 
 
 # Password validation
@@ -132,7 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-DEFAULT_FILE_STORAGE = 'DiabetesPrediction.custom_azure.AzureMediaStorage'
+'''DEFAULT_FILE_STORAGE = 'DiabetesPrediction.custom_azure.AzureMediaStorage'
 STATICFILES_STORAGE = 'DiabetesPrediction.custom_azure.AzureStaticStorage'
 
 STATIC_LOCATION = "static"
@@ -141,9 +142,9 @@ MEDIA_LOCATION = "media"
 AZURE_ACCOUNT_NAME = "storageblob123"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/' '''
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS= (
     os.path.join(BASE_DIR, 'static'),
 )
