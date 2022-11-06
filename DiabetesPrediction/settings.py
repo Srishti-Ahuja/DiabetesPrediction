@@ -146,9 +146,9 @@ MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/' '''
 
 STATIC_URL = '/static/DiabetesPrediction/'
 STATICFILES_DIRS= (
-    os.path.join(BASE_DIR, 'static/DiabetesPrediction/'),
+    os.path.join(BASE_DIR, 'static/DiabetesPrediction'),
 )
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'static/DiabetesPrediction/')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'static/DiabetesPrediction')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
