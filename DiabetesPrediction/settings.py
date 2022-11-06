@@ -144,7 +144,7 @@ AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/' '''
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/DiabetesPrediction/'
 STATICFILES_DIRS= (
     os.path.join(BASE_DIR, 'static'),
 )
