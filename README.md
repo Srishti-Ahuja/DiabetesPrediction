@@ -12,7 +12,7 @@ One can easily use this app sitting at home and find out the possibility of diab
 
 Have a look at the project [here](https://diabetespredictionapp.azurewebsites.net/)
 
-![HomePage](https://storageblob123.blob.core.windows.net/project-screenshots/Hompage.png)
+![HomePage](https://storageblob1234.blob.core.windows.net/static/images/Hompage.png)
 
 ### Technologies Used
 1. The project uses Machine Learning Binary Classification model Random Forest Classifier to find an accurate result.
@@ -26,8 +26,8 @@ This Application can be used to detect the possibility of Diabetes in an individ
 
 1. Fill in all the details accurately to the best of your knowledge and click submit.
 
-![Predict Page](https://storageblob123.blob.core.windows.net/project-screenshots/PredictPage.png)
+![Predict Page](https://storageblob1234.blob.core.windows.net/static/images/PredictPage.png)
 
 2. Now view the result and voila! you are done.
 
-![Result Page](https://storageblob123.blob.core.windows.net/project-screenshots/ResultPage.png)
+![Result Page](https://storageblob1234.blob.core.windows.net/static/images/ResultPage.png)
