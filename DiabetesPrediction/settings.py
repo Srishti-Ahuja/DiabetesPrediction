@@ -144,11 +144,11 @@ AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/' '''
 
-STATIC_URL = '/static/DiabetesPrediction/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS= (
-    os.path.join(BASE_DIR, 'static/DiabetesPrediction'),
+    os.path.join(BASE_DIR, 'static'),
 )
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'static/DiabetesPrediction')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
