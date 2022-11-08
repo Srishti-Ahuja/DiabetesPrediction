@@ -75,26 +75,18 @@ WSGI_APPLICATION = 'DiabetesPrediction.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': str(BASE_DIR / "db.sqlite3"),
     }
 }
-'''
-DATABASES = {
-     'default': {
-         'ENGINE': 'sql_server.pyodbc',
-         'NAME': 'dbdjango',
-         'USER': 'admin1@dbserverdjango',
-         'PASSWORD': 'sqldb@123',
-         'HOST': 'dbserverdjango.database.windows.net',
-         'PORT': '1433',
-         'OPTIONS' : {
-                'driver': 'ODBC Driver 17 for SQL Server',
-          }
-      }
- }'''
 
 
 # Password validation
@@ -139,7 +131,7 @@ USE_TZ = True
 # STATIC_LOCATION = "static"
 # MEDIA_LOCATION = "media"
 
-# AZURE_ACCOUNT_NAME = "storageblob1234"
+# AZURE_ACCOUNT_NAME = "storageblob123"
 # AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 # STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 # MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
